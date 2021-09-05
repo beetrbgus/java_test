@@ -2,7 +2,7 @@ package data_Sort;
 
 import java.util.Scanner;
 
-public class c_1172 {
+public class C_1172 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int arr[] = new int[3];
