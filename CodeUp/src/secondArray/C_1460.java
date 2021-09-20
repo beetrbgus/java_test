@@ -11,7 +11,7 @@ public class C_1460 {
 		for (int i = 0; i < n; i++) {
 			for(int j = 0  ; j < n ; j ++) {
 				count++;
-				System.out.print(count);
+				System.out.print(count+ " ");
 			}
 			System.out.println();
 		}
