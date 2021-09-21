@@ -2,27 +2,24 @@ package secondArray;
 
 import java.util.Scanner;
 
-public class C_1461 {
+public class C_1467 {
 	public static void main(String[] args) {
+
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
+		int m = sc.nextInt();
+		int first = n * m;
 		sc.close();
-		if(n >= 1 && n <= 100) {
+		if (n >= 1 && m <= 100) {
 			for (int i = 1; i <= n; i++) {
-				for(int j = 0  ; j < n ; j ++) {
-					int result = (i * n) - j ;  
-					
-					if(j == n) {
-						System.out.print(result);	
-					}
-					else{
-						System.out.print(result + " ");
-					}
+				for (int j = 1; j <= m; j++) {
+					System.out.print((first + (i -1 )) - (n * (j)) + 1 + " ");
 				}
 				System.out.println();
 			}
-			
+
 		}
+		
 	}
 }

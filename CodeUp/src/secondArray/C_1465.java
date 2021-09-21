@@ -23,6 +23,7 @@ public class C_1465 {
 		int n = sc.nextInt();
 		int m = sc.nextInt();
 		int first = n * m;
+		sc.close();
 		if (n >= 1 && m <= 100) {
 			for (int i = 1; i <= n; i++) {
 				for (int j = 1; j <= m; j++) {	  

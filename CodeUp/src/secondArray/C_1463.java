@@ -23,6 +23,7 @@ public class C_1463 {
 		Scanner sc = new Scanner(System.in);
 
 		int n = sc.nextInt();
+		sc.close();
 		if (n >= 1 && n <= 100) {
 			for (int i = n; i > 0; i--) {
 				for (int j = 1; j <= n; j++) {
