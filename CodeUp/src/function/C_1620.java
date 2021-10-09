@@ -30,13 +30,3 @@ public class C_1620 {
 		sc.close();
 	}
 }
-
-//public class Main {
-//	public float f() {
-//		return 3.14f;
-//	}
-//	public static void main(String[] args) {
-//		Main c = new Main();
-//		System.out.println(c.f());
-//	}
-//}
