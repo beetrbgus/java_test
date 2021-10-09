@@ -3,9 +3,8 @@ package function;
 import java.util.Scanner;
 
 public class C_1620 {
-	static C_1620 c = new C_1620();
 
-	public int f(int a) {
+	public static int f(int a) {
 		int result = 0;
 		boolean isUnderTen = true;
 		
@@ -26,8 +25,9 @@ public class C_1620 {
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
 		if (a >= 1 && a <= 10000000) {
-			System.out.println(c.f(a));
+			System.out.println(f(a));
 		}
+		sc.close();
 	}
 }
 
