@@ -1,22 +1,21 @@
 package sort;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class B_2750 {
-	public static void main(String[] args) {
-		//오름 차순 정렬
-//		List<Integer> arr = new ArrayList<>();
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		int n = Integer.parseInt(br.readLine());
 		int arr[] = new int[n];
 
 		for (int i = 0; i < n; i++) {
-			int num = sc.nextInt();
+			int num = Integer.parseInt(br.readLine());
 			arr[i] =  num;
 		}
-		sc.close();
+		br.close();
 		for (int i = 0; i < n; i++) {
 			for (int j = i; j > 0; j--) {
 				int arrJ = arr[j];
@@ -24,6 +23,8 @@ public class B_2750 {
 				if (arrJ < arrJpre ) {
 					arr[j] = arrJpre;
 					arr[j-1] = arrJ;
+				}else {
+					break;
 				}
 
 			}
