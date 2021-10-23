@@ -11,8 +11,8 @@ public class B_10952 {
 			while (sc.hasNextInt()) {
 				int a = sc.nextInt();
 				int b = sc.nextInt();
-				System.out.println(a+b);
 				if(a ==0 || b==0) break;
+				System.out.println(a+b);
 			}
 			sc.close();
 			
