@@ -17,6 +17,7 @@ public class B_1065 {
 			if(arithmeticSequence(i)) cnt++;
 		}
 		System.out.println(cnt);
+		br.close();
 	}
 
 	// 등차 수열인지 판단하는 메서드
