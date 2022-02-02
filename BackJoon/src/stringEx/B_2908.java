@@ -15,7 +15,7 @@ public class B_2908 {
 		// 2개면 굳이 비교할 필요 없지만 2개 이상일 경우 생각해서 풀어보기로 함.
 		String[] sangsooAnswer = n2.split(" ");
 		int result = getBig(sangsooAnswer);
-		 
+		
 		System.out.println(result);
 	}
 	//역순으로 정렬한 문자의 배열 받아 큰 수 찾기
