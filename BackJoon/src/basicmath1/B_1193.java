@@ -3,48 +3,37 @@ package basicmath1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 //분수 찾기
 public class B_1193 {
 	public static void main(String args[]) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		// 단 : 1 , 3 단 =  n/1 시작
-		// 단 : 2 , 4 단 =  1/n
-		// 1 - 1/1 (x+y) = 2 
-		// 2 - 1/2 (x+y) = 3 (x+1 , y -1)
-		// 3 - 2/1 
-		// 4 - 3/1 (x+y) = 4 (x-1 , y +1)
-		// 5 - 2/2
-		// 6 - 1/3
-		// 7 - 1/4
-		// 8 - 2/3
-		// 9 - 3/2
-		//10 - 4/1
-		int t = Integer.parseInt(br.readLine()); //올라감
-		if(t==1) System.out.println(1/1);
-		for(int i=0;i<t;i++) {
-			StringTokenizer st =new StringTokenizer(br.readLine()," ");
-			int h = Integer.parseInt(st.nextToken());
-			int w = Integer.parseInt(st.nextToken());
-			int n = Integer.parseInt(st.nextToken());
-			System.out.println(getRoomNumber(h,w,n));
-		}
+		// 단 수를 구한 후 n에서 이동할 수만큼 빼고 , 1에서 이동할 수만큼 증가시킴
+		int t = Integer.parseInt(br.readLine());
 		br.close();
+		String result = getdan(t);
+		System.out.println(result);
 	}
-	public static String getRoomNumber(int h,int w,int n) {
-		//h : 층 수  w : 방 수 n : 손님 몇번째인지
-		String roomNumber="";
-		int ho = 1;
-		while(true) {
-			if(n<=h) {
+	//단 수 구하기
+	public static String getdan(int input) {
+		int floor = 1;
+		while(true){
+			if(input<=floor) {
 				break;
 			}
-			n-=h;
-			ho++;
+			input-=floor; 
+			floor++;
 		}
-		if(ho<10) roomNumber = n+"0"+ho;
-		else roomNumber = String.valueOf(n)+String.valueOf(ho);
-		
-		return roomNumber;
+		return getfraction(input,floor);
+	}
+	public static String getfraction(int input,int floor) {
+		//floor - 단 수 , input - 가야될 수
+		String devide="/";
+		int big = floor -(input-1);
+		int small = 1 +(input-1);
+		// 단 : 1 , 3 단 : 홀수 =  n/1 시작
+		// 단 : 2 , 4 단 : 짝수 =  1/n 시작		
+		if(floor%2==1) devide = big+devide+small;
+		else devide = small+devide+big;
+		return devide;
 	}
 }
