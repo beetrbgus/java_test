@@ -37,19 +37,18 @@ public class B_2798 {
 
 				for (int k = j + 1; k < n; k++) {
 					int third = Integer.parseInt(cardArr[k]);
+					sum = first + second + third; //합계 만듦.
 					// 블랙잭이면 멈춤
 					if (sum == m) {
 						approximation = sum;
 						isBlackJack = true;
 						break;
 					}
-					if (first + second + third > m) continue;
-					sum = first + second + third;
-
-				}
-				// 근사값것보다 지금 뽑은게 더 크고 뽑은게 m과 작으면 근사값 재설정
-				if (approximation < sum && sum < m) {
-					approximation = sum;
+					if (sum > m) continue;
+					// 근사값것보다 지금 뽑은게 더 크고 뽑은게 m과 작으면 근사값 재설정
+					if (approximation < sum && sum < m) {
+						approximation = sum;
+					}
 				}
 				if (isBlackJack) {
 					break;
