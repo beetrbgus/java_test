@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 //첫째 줄에 종료되는 시각의 시와 분을 공백을 사이에 두고 출력
-public class B_2525 { 
+public class B_2525 {
 	public static void main(String args[]) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String n = br.readLine();
