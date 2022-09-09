@@ -1,8 +1,9 @@
-package lv2;
+package org.codetest.lv2;
 
 import java.util.Stack;
 
-public class P_76502_괄호회전 {
+// P_76502_괄호회전
+public class P_76502_BracketRotation {
 	public int solution(String s) {
 		int answer = 0;
 		StringBuilder sb = new StringBuilder();
@@ -50,7 +51,7 @@ public class P_76502_괄호회전 {
 	}
 
 	public static void main(String args[]) {
-		P_76502_괄호회전 p = new P_76502_괄호회전();
+		P_76502_BracketRotation p = new P_76502_BracketRotation();
 		System.out.println(p.solution("}]()[{"));
 	}
 }
